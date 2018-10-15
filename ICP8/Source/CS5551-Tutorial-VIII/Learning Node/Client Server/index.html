@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Numbers API</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+    <!-- Required Imports -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+    <!-- Required Import for Data Binding -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-sanitize.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body style="background-color: lightcoral">
+<div align="center" >
+
+<div  ng-controller="NamesCtrl" class="container" ng-app="numbersApp">
+    <h1 align="absolute" style="background-color:brown;text-align: center; color:white">Know the Truth Behind Date</h1>
+    <div class="form-group">
+        <label><strong><h1><b>Month:</b></h1></strong></label>
+        <input type="text" style="color:blue" id="month" placeholder="Enter the month"/>
+    </div>
+    <div class="form-group">
+        <label><strong><h1><b>Date:</b></h1></strong>&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input style="padding: 14px40px" type="text" id="date" placeholder="Enter the date"/>
+    </div>
+    <button class="btn-primary" ng-click="getNumbersInfo()" style="background-color:brown;align-content: center">Get the Truth</button>
+    <br/><br/>
+    <p class="error" id="fielderror" ng-bind-html="fielderrorhtml" style="color:brown;align-content:center "></p>
+    <p id="output" style="background-color:wheat;display:none;margin-left: 8.0em"><strong>{{output}}</strong></p>
+</div>
+</div>
+
+</body>
+</html>
