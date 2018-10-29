@@ -6,7 +6,7 @@ var logger = require('morgan');
 var cors = require('cors');
 const db = require('mongoose');
 
-let student = require('./model/student');
+let student = require('./model/registration');
 let db_check = db.connect('mongodb://lakshmana:sweetmom143@ds243295.mlab.com:43295/lakshman');
 db_check.then((result)=>{
   console.log("DB connection is established !");
@@ -27,7 +27,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 //rest API
-require('./routes/student')(app, db);
+require('./routes/registration')(app, db);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
